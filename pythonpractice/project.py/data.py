@@ -1,5 +1,6 @@
 """
-Economic Indicators by U.S. President -
+Economic Indicators by U.S. President 
+Stream Lit
 """
 
 from pathlib import Path
@@ -296,8 +297,7 @@ def main():
         filtered_data
         .groupby("Indicator")["Value"]
         .agg(["mean", "min", "max"])
-        .reset_index()
-    )
+        .reset_index())
 
     st.dataframe(summary)
 
